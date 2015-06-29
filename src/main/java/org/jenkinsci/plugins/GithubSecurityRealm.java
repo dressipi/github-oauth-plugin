@@ -318,6 +318,7 @@ public class GithubSecurityRealm extends SecurityRealm {
             scopes.addAll(s.getScopesToRequest());
         }
         String suffix="";
+        scopes.add("read:org");
         if (!scopes.isEmpty()) {
             suffix = "&scope="+Util.join(scopes,",");
         }
